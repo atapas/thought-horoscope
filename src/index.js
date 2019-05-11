@@ -4,9 +4,9 @@ const inquirer = require("inquirer");
 const chalk = require("chalk");
 const figlet = require("figlet");
 const shell = require("shelljs");
-const request = require('request');
 
-const sunsign = require('./sunsign');
+const SunSign = require('./sunsign');
+const horoscope = require('./horoscope');
 
 // init method
 const init = () => {
@@ -50,55 +50,7 @@ const questionAnswer = () => {
     return inquirer.prompt(questions);
 }
 
-const getHoroscope = (sunSign, duration) => {
-    
-    let constURI = `http://horoscope-api.herokuapp.com//horoscope/${duration.toLowerCase()}/${sunSign}`;
-    request(constURI, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            let info = JSON.parse(body);
-            printHoroscope(info, duration);
-        } else {
-            if (error) {
-                console.log(chalk.red(`${response.statusCode}: Failed to get Horoscope at this time, Try Later!`));
-            }
-        }
-    });
-}
 
-const printHoroscope = (info, duration) => {
-    console.log('\n\n');
-
-    if (duration === 'Today') {
-        console.log(
-            chalk.white.underline.bold(
-                `Horoscope of Zodiac Sign [${info.sunsign}] for the date, ${info.date}: `
-            )
-        );
-    } else if (duration === 'Week') {
-        console.log(
-            chalk.white.underline.bold(
-                `Horoscope of Zodiac Sign [${info.sunsign}] for the duration, ${info.week}: `
-            )
-        );
-
-    } else if (duration === 'Month') {
-        console.log(
-            chalk.white.underline.bold(
-                `Horoscope of Zodiac Sign [${info.sunsign}] for the Month, ${info.month}: `
-            )
-        );
-        
-    }else if (duration === 'Year') {
-        console.log(
-            chalk.white.underline.bold(
-                `Horoscope of Zodiac Sign [${info.sunsign}] for the Year, ${info.year}: `
-            )
-        );
-    }
-    
-    console.log(chalk.green(info.horoscope));
-    console.log('\n');
-}
 
 const doTask = async() => {
     // initialize the tool with some text
@@ -112,7 +64,7 @@ const doTask = async() => {
                 `Calculating Zodiac Sign of ${answers.NAME} with date of birth ${answers.DOB}....`
             )
         );
-        const sunSign = sunsign.getSunSign(answers.NAME, answers.DOB);
+        const sunSign = new SunSign().getSunSign(answers.NAME, answers.DOB);
         console.log(
             chalk.yellow(
                 `Calculated Zodiac Sign of ${answers.NAME} is, [${sunSign}]`
@@ -120,7 +72,7 @@ const doTask = async() => {
         );
         
         // Call API to get the Horoscope based on the sunSign
-        getHoroscope(sunSign, answers.DURATION);
+        horoscope.getHoroscope(sunSign, answers.DURATION);
     });
 };
 
