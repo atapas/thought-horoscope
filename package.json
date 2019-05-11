@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "This is a sample app for interacting with File System using CLI",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atapas/thought-horoscope.git"
+  },
   "scripts": {
+    "prod": "node index.js",
     "test": "jest"
   },
   "keywords": [
@@ -14,7 +19,7 @@
   "author": "Tapas Adhikary",
   "license": "MIT",
   "bin": {
-    "thought-cli": "./index.js"
+    "horoscope": "./index.js"
   },
   "dependencies": {
     "chalk": "^2.4.2",
