@@ -1,0 +1,25 @@
+{
+  "name": "thought-cli",
+  "version": "1.0.0",
+  "description": "This is a sample app for interacting with File System using CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "npm",
+    "cli",
+    "file system"
+  ],
+  "author": "Tapas Adhikary",
+  "license": "MIT",
+  "bin": {
+    "thought-cli": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "figlet": "^1.2.1",
+    "inquirer": "^6.3.1",
+    "shelljs": "^0.8.3"
+  }
+}
