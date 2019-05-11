@@ -6,6 +6,8 @@ const figlet = require("figlet");
 const shell = require("shelljs");
 const request = require('request');
 
+const sunsign = require('./sunsign');
+
 // init method
 const init = () => {
     console.log(
@@ -46,90 +48,6 @@ const questionAnswer = () => {
         }
     ];
     return inquirer.prompt(questions);
-}
-
-const getSunSign = (name, dob) => {
-    console.log(
-        chalk.yellow(
-            `Calculating Zodiac Sign of ${name} with date of birth ${dob}....`
-        )
-    );
-
-    let day = parseInt(dob.split('/')[0], 10);
-    let month = parseInt(dob.split('/')[1], 10);
-    // console.log(`day and month: ${day} and ${month}`);
-
-    let astroSign; 
-          
-    // checks month and date within the  
-    // valid range of a specified zodiac 
-    if (month === 12){     
-        if (day < 22) {
-            astroSign = "Sagittarius";
-        }
-        else {
-            astroSign ="capricorn";
-        }
-    } else if (month === 1){ 
-        if (day < 20) {
-            astroSign = "Capricorn";
-        } else {
-            astroSign = "aquarius";
-        }
-    } else if (month === 2){ 
-        if (day < 19) {
-            astroSign = "Aquarius"; 
-        } else {
-            astroSign = "pisces";
-        } 
-    } else if(month === 3){ 
-        if (day < 21) {
-            astroSign = "Pisces";
-        } else {
-            astroSign = "aries";
-        }
-    } else if (month === 4){ 
-        if (day < 20) 
-            astroSign = "Aries"; 
-        else
-            astroSign = "taurus"; 
-    } else if (month === 5){ 
-        if (day < 21) 
-            astroSign = "Taurus"; 
-        else
-            astroSign = "gemini"; 
-    } else if( month === 6){ 
-        if (day < 21) 
-            astroSign = "Gemini"; 
-        else
-            astroSign = "cancer"; 
-    } else if (month === 7){ 
-        if (day < 23) 
-            astroSign = "Cancer"; 
-        else
-            astroSign = "leo"; 
-    } else if( month === 8){ 
-        if (day < 23)  
-            astroSign = "Leo"; 
-        else
-            astroSign = "virgo"; 
-    } else if (month === 9){ 
-        if (day < 23) 
-            astroSign = "Virgo"; 
-        else
-            astroSign = "libra"; 
-    } else if (month === 10){ 
-        if (day < 23) 
-            astroSign = "Libra"; 
-        else
-            astroSign = "scorpio"; 
-    } else if (month === 11){ 
-        if (day < 22) 
-            astroSign = "scorpio"; 
-        else
-            astroSign = "sagittarius"; 
-    } 
-    return astroSign;
 }
 
 const getHoroscope = (sunSign, duration) => {
@@ -189,7 +107,12 @@ const doTask = async() => {
     // Ask Questions
     questionAnswer().then(answers => {
         // Calculate Zodiac Sun-Sign
-        const sunSign = getSunSign(answers.NAME, answers.DOB);
+        console.log(
+            chalk.yellow(
+                `Calculating Zodiac Sign of ${answers.NAME} with date of birth ${answers.DOB}....`
+            )
+        );
+        const sunSign = sunsign.getSunSign(answers.NAME, answers.DOB);
         console.log(
             chalk.yellow(
                 `Calculated Zodiac Sign of ${answers.NAME} is, [${sunSign}]`
