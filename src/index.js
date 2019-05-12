@@ -45,7 +45,14 @@ const questionAnswer = () => {
             type: "list",
             message: "For which duration?",
             choices: ["Today", "Week", "Month", "Year"]
+        },
+        {
+            name: "REPORT_TYPES",
+            type: "checkbox",
+            message: "What type of report would you like to generate?",
+            choices: ["Text", "HTML"]
         }
+
     ];
     return inquirer.prompt(questions);
 }
@@ -70,9 +77,17 @@ const doTask = async() => {
                 `Calculated Zodiac Sign of ${answers.NAME} is, [${sunSign}]`
             )
         );
+
+        const dataToProcess = {};
+        dataToProcess['name'] = answers.NAME;
+        dataToProcess['dob'] = answers.DOB;
+        dataToProcess['report'] = answers.REPORT_TYPES;
+        dataToProcess['sunsign'] = sunSign;
+        dataToProcess['duration'] = answers.DURATION;
         
+        // console.log(dataToProcess);
         // Call API to get the Horoscope based on the sunSign
-        horoscope.getHoroscope(sunSign, answers.DURATION);
+        horoscope.getHoroscope(dataToProcess);
     });
 };
 
