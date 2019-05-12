@@ -17,14 +17,14 @@ module.exports = {
     coverageDirectory: 'coverage',
 
     // This will be used to configure minimum threshold enforcement for coverage results. 
-    "coverageThreshold": {
+    /*"coverageThreshold": {
       "global": {
         "branches": 80,
         "functions": 80,
         "lines": 80,
         "statements": -10
       }
-    },
+    },*/
   
     // An array of file extensions your modules use
     moduleFileExtensions: ['js', 'json', 'jsx'],
