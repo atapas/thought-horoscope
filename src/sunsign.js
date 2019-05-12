@@ -1,7 +1,7 @@
 #!c:/progra~1/nodejs/node
 
 class SunSign {
-    getSunSign(name, dob) {
+    getSunSign(dob) {
         let day = parseInt(dob.split('/')[0], 10);
         let month = parseInt(dob.split('/')[1], 10);
         // console.log(`day and month: ${day} and ${month}`);

@@ -70,7 +70,7 @@ const doTask = async() => {
                 `Calculating Zodiac Sign of ${answers.NAME} with date of birth ${answers.DOB}....`
             )
         );
-        const sunSign = new SunSign().getSunSign(answers.NAME, answers.DOB);
+        const sunSign = new SunSign().getSunSign(answers.DOB);
         console.log(
             chalk.yellow(
                 `Calculated Zodiac Sign of ${answers.NAME} is, [${sunSign}]`

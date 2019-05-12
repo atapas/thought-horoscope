@@ -9,7 +9,7 @@
   },
   "scripts": {
     "app": "node src/index.js",
-    "test": "jest"
+    "test": "jest --config jest.config.js"
   },
   "keywords": [
     "npm",
@@ -26,7 +26,12 @@
     "figlet": "^1.2.1",
     "fs-extra": "^8.0.0",
     "inquirer": "^6.3.1",
-    "request": "^2.88.0",
-    "shelljs": "^0.8.3"
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.4",
+    "babel-jest": "^24.7.1",
+    "babel-polyfill": "^6.26.0",
+    "jest": "^24.7.1"
   }
 }
