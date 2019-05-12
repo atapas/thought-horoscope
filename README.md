@@ -8,3 +8,9 @@
 
 # Test it
  - npm run test
+
+# See it in action
+
+<img src="https://github.com/atapas/thought-horoscope/blob/master/assets/images/screen.gif" align="center" style="height: 100%;width:100%"/>
+
+# Blog
