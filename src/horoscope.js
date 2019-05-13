@@ -1,4 +1,3 @@
-#!c:/progra~1/nodejs/node
 
 const chalk = require("chalk");
 const request = require('request');

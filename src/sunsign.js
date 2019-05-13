@@ -1,4 +1,3 @@
-#!c:/progra~1/nodejs/node
 
 class SunSign {
     getSunSign(dob) {
