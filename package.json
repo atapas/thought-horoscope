@@ -1,8 +1,8 @@
 {
-  "name": "thought-cli",
+  "name": "thought-horoscope-test",
   "version": "1.0.0",
   "description": "This is a sample app for interacting with File System using CLI",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/atapas/thought-horoscope.git"

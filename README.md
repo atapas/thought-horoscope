@@ -1,10 +1,43 @@
 # thought-horoscope
 `thought-horoscope` is a tool to know your Horoscope for Today, Month, Week or Year. The tool works on node-cli(Command Line Interface).
 
-# Run it
+# Download and Use
+`thought-horoscope` is available as a public npm to download and use.
+
+## Pre-requisite
+- Node version >= 8.0
+
+## To Download
+```js
+ npm i thought-horoscope
+```
+
+## To use
+To use `thought-horoscope` tool,
+- First import it in your js file with a `require` statement:
+
+ ```js
+ const horoscope = require('thought-horoscope');
+ ```
+- Once imported, you can use it to call from anywher:
+
+ ```js
+  const test = () => {
+    horoscope();
+  };
+
+  test();
+ ``` 
+# Run from Source
 
 - npm install
 - npm run app
+
+Note: Please read following lines from `src/index.js` file before running the app from the source.
+```js
+// uncomment this one if you would like to run this from source.
+//doTask();
+```
 
 # Test it
  - npm run test
