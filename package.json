@@ -1,5 +1,5 @@
 {
-  "name": "thought-horoscope-test",
+  "name": "thought-horoscope",
   "version": "1.0.0",
   "description": "This is a sample app for interacting with File System using CLI",
   "main": "src/index.js",
