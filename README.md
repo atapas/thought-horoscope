@@ -15,7 +15,7 @@
 
 # Blog
 Read about this from here,
-[A step by step guide to your first CLI(Command Line Interface) app using Node.js](https://atapas.hashnode.dev/a-step-by-step-guide-to-your-first-clicommand-line-interface-app-using-nodejs-cjvm6woau000mkvs1sd8u3qxm)
+[A step by step guide to your first CLI(Command Line Interface) app using Node.js](https://blog.greenroots.info/a-step-by-step-guide-to-your-first-clicommand-line-interface-app-using-nodejs-cjvm6woau000mkvs1sd8u3qxm)
 
 Liked what I do? Thank You Very Much!
 
