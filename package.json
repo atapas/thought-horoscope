@@ -1,6 +1,6 @@
 {
   "name": "thought-horoscope",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "This is a sample app for interacting with File System using CLI",
   "main": "src/index.js",
   "repository": {
