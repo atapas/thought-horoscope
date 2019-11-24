@@ -44,7 +44,7 @@ Note: Please read following lines from `src/index.js` file before running the ap
 
 # See it in action
 
-<img src="https://github.com/atapas/thought-horoscope/blob/master/assets/images/screen.gif" align="center" style="height: 100%;width:100%"/>
+<img src="./assets/images/screen.gif" align="center" style="height: 100%;width:100%"/>
 
 # Blog
 Read about this from here,
