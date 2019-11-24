@@ -92,6 +92,3 @@ const doTask = async() => {
 
 // This line is required as we are publishing it as NPM
 module.exports = doTask;
-
-// uncomment this one if you would like to run this from source.
-//doTask();

@@ -33,12 +33,6 @@ To use `thought-horoscope` tool,
 - npm install
 - npm run app
 
-Note: Please read following lines from `src/index.js` file before running the app from the source.
-```js
-// uncomment this one if you would like to run this from source.
-//doTask();
-```
-
 # Test it
  - npm run test
 
