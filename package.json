@@ -1,7 +1,7 @@
 {
   "name": "thought-horoscope",
   "version": "1.1.2",
-  "description": "This is a sample app for interacting with File System using CLI",
+  "description": "thought-horoscope is a cli tool to know your Horoscope for Today, Month, Week or Year.",
   "main": "src/index.js",
   "repository": {
     "type": "git",
