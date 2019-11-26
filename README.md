@@ -19,7 +19,7 @@ To use `thought-horoscope` tool,
  ```js
  const horoscope = require('thought-horoscope');
  ```
-- Once imported, you can use it to call from anywher:
+- Once imported, you can use it to call from anywhere:
 
  ```js
   const test = () => {
